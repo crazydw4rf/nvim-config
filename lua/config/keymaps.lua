@@ -13,3 +13,12 @@ map({ "n", "v" }, "<leader>e", "<CMD>Neotree focus<CR>", { desc = "Focus to Neot
 map({ "n", "v" }, "<F2>", "<CMD>lua vim.lsp.buf.rename()<CR>", { desc = "Rename variable" })
 map({ "n" }, "<C-I>", "<CMD>BufferLineCycleNext<CR>", { desc = "Next buffer" })
 map("i", "<C-H>", "<ESC>diwi", { desc = "Delete whole word" })
+map("n", "<leader>x", "<Space>bd", { desc = "Close buffer" })
+
+-- duck.nvim
+map("n", "<leader>dd", function()
+  require("duck").hatch("🦆", 20)
+end, { desc = "Release a duck" }) -- A pretty fast duck
+map("n", "<leader>dc", function()
+  require("duck").hatch("🐈", 12)
+end, { desc = "Release a cat" }) -- Quite a mellow cat
