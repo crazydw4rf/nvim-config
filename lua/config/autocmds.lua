@@ -7,13 +7,27 @@
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
+local nca = vim.api.nvim_create_autocmd
+
 -- Bash languange server
-vim.api.nvim_create_autocmd("FileType", {
+nca("FileType", {
   pattern = { "sh", "zshrc", "bashrc", "bash" },
   callback = function()
     vim.lsp.start({
       name = "bash-language-server",
       cmd = { "bash-language-server", "start" },
+    })
+  end,
+})
+
+nca({ "BufEnter", "BufWinEnter" }, {
+  pattern = { "*.hl", "hypr*.conf" },
+  callback = function(_)
+    -- print(string.format("starting hyprls for %s", vim.inspect(event)))
+    vim.lsp.start({
+      name = "hyprlang",
+      cmd = { "hyprls" },
+      root_dir = vim.fn.getcwd(),
     })
   end,
 })
