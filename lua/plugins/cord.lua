@@ -14,11 +14,7 @@ return {
         return "Starring at " .. opts.filename
       end,
       editing = function(opts)
-        local text = "Editing " .. opts.filename
-        if vim.bo.modified then
-          text = text .. "[+]"
-        end
-        return text
+        return string.format("Editing %s - %s:%s", opts.filename, opts.cursor_line, opts.cursor_char)
       end,
       workspace = function(opts)
         return string.format("In %s | branch: %s", opts.workspace, opts.git_status)
@@ -28,6 +24,14 @@ return {
       workspace_change = function(_)
         git_branch = vim.fn.system("git branch --show-current"):gsub("\n", "")
       end,
+    },
+    buttons = {
+      {
+        label = "View Repository",
+        url = function(opts)
+          return opts.repo_url or "https://www.youtube.com/watch?v=xvFZjo5PgG0"
+        end,
+      },
     },
   },
 }
