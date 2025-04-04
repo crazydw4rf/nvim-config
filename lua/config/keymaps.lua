@@ -8,6 +8,7 @@ map("n", "\\", "i")
 map("n", "|", "v")
 map("i", "\\\\", "<ESC>")
 map("i", "jj", "<ESC>")
+map("i", "kk", "<Esc>v")
 map("n", ";", ":")
 
 map({ "n", "v" }, "<F2>", "<CMD>lua vim.lsp.buf.rename()<CR>", { desc = "Rename variable" })
