@@ -12,10 +12,6 @@ map("i", "kk", "<Esc>v")
 map("n", ";", ":")
 
 map({ "n", "v" }, "<F2>", "<CMD>lua vim.lsp.buf.rename()<CR>", { desc = "Rename variable" })
-
-map("n", "_", "<CMD>BufferLineCyclePrev<CR>", { desc = "Change to previous buffer" })
-map("n", "+", "<CMD>BufferLineCycleNext<CR>", { desc = "Change next buffer" })
-
 map({ "n", "v" }, "<leader>dd", '"_dd', { desc = "Delete line without yanking" })
 
 -- Who the hell in this world still uses arrow keys for navigation?
