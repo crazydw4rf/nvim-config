@@ -19,6 +19,3 @@ map({ "n", "v" }, "<Up>", '<CMD>echo "↑ lol. no."<CR>', { noremap = true })
 map({ "n", "v" }, "<Left>", '<CMD>echo "Left? Really? Did your HJKL keys break?"<CR>', { noremap = true })
 map({ "n", "v" }, "<Down>", '<CMD>echo "Down? Are you lost? Try ’j‘ like a pro."<CR>', { noremap = true })
 map({ "n", "v" }, "<Right>", '<CMD>echo "Right... because ’l‘ was just too efficient?"<CR>', { noremap = true })
-
-map("n", "<CR>", "m`o<Esc>")
-map("n", "<S-CR>", "m`O<Esc>")
