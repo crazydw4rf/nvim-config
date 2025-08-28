@@ -9,7 +9,6 @@ map("n", "|", "v")
 map("i", "\\\\", "<ESC>")
 map("i", "jj", "<ESC>")
 map("i", "kk", "<Esc>v")
-map("n", ";", ":")
 
 map({ "n", "v" }, "<F2>", "<CMD>lua vim.lsp.buf.rename()<CR>", { desc = "Rename variable" })
 map({ "n", "v" }, "<leader>dd", '"_dd', { desc = "Delete line without yanking" })
@@ -19,3 +18,7 @@ map({ "n", "v" }, "<Up>", '<CMD>echo "↑ lol. no."<CR>', { noremap = true })
 map({ "n", "v" }, "<Left>", '<CMD>echo "Left? Really? Did your HJKL keys break?"<CR>', { noremap = true })
 map({ "n", "v" }, "<Down>", '<CMD>echo "Down? Are you lost? Try ’j‘ like a pro."<CR>', { noremap = true })
 map({ "n", "v" }, "<Right>", '<CMD>echo "Right... because ’l‘ was just too efficient?"<CR>', { noremap = true })
+
+map("n", "<F3>", "<CMD>TwoslashQueriesEnable<CR>", { desc = "Enable TwoSlash Queries", nowait = true, noremap = true })
+map("n", "<F4>", "<CMD>TwoslashQueriesDisable<CR>",
+  { desc = "Disable TwoSlash Queries", nowait = true, noremap = true })
