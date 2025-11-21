@@ -28,3 +28,4 @@ if is_win_or_wsl then
 end
 
 vim.g.lazyvim_eslint_auto_format = true
+vim.o.backupcopy = "yes"
