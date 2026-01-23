@@ -29,7 +29,7 @@ return {
       {
         label = "View Repository",
         url = function(opts)
-          return opts.repo_url or "https://www.youtube.com/watch?v=xvFZjo5PgG0"
+          return opts.repo_url or "https://media.tenor.com/VSJ6xRhatEUAAAAi/kemusan-emu-otori.gif"
         end,
       },
     },
