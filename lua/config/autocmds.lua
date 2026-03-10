@@ -31,9 +31,3 @@ nca({ "BufEnter", "BufWinEnter" }, {
     })
   end,
 })
-
-nca("BufWritePre", {
-  -- buffer = 0,
-  command = "LspEslintFixAll",
-  pattern = { "*.js", "*.jsx", "*.ts", "*.tsx" },
-})
