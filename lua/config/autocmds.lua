@@ -11,7 +11,7 @@ local nca = vim.api.nvim_create_autocmd
 
 -- Bash languange server
 nca("FileType", {
-  pattern = { "sh", "zshrc", "bashrc", "bash" },
+  pattern = { "sh", "zshrc", "zsh", "bashrc", "bash" },
   callback = function()
     vim.lsp.start({
       name = "bash-language-server",
@@ -29,5 +29,24 @@ nca({ "BufEnter", "BufWinEnter" }, {
       cmd = { "hyprls" },
       root_dir = vim.fn.getcwd(),
     })
+  end,
+})
+
+nca("LspAttach", {
+  callback = function(event)
+    vim.keymap.set("n", "J", vim.diagnostic.open_float, {
+      desc = "Diagnostic hover",
+      noremap = true,
+      silent = true,
+      buffer = event.buf,
+    })
+  end,
+})
+
+nca({ "ColorScheme", "WinEnter", "BufEnter" }, {
+  group = vim.api.nvim_create_augroup("LineNumberColor", { clear = true }),
+  callback = function()
+    vim.api.nvim_set_hl(0, "LineNr", { fg = "#7f849c", bg = "NONE" })
+    vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#f5e0dc", bg = "NONE" })
   end,
 })
