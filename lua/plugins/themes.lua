@@ -2,7 +2,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-mocha",
+      colorscheme = "rose-pine-moon",
     },
   },
 
@@ -13,5 +13,10 @@ return {
     opts = {
       transparent_background = true,
     },
+  },
+
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
   },
 }

@@ -2,6 +2,7 @@ vim.filetype.add({
   pattern = {
     [".*/waybar/config"] = "jsonc",
     [".*/hypr/.*%.conf"] = "hyprlang",
+    [".*/i3/.*"] = "i3config",
   },
 })
 
@@ -34,5 +35,5 @@ vim.g.lazyvim_eslint_auto_format = true
 vim.o.backupcopy = "yes"
 
 vim.g.lazyvim_rust_diagnostics = "bacon-ls"
-vim.g.lazyvim_python_lsp = "basedpyright"
+vim.g.lazyvim_python_lsp = "pyright"
 vim.g.lazyvim_python_ruff = "ruff"

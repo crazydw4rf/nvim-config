@@ -43,10 +43,10 @@ nca("LspAttach", {
   end,
 })
 
-nca({ "ColorScheme", "WinEnter", "BufEnter" }, {
-  group = vim.api.nvim_create_augroup("LineNumberColor", { clear = true }),
+nca({ "ColorScheme", "WinEnter" }, {
+  group = vim.api.nvim_create_augroup("CustomColor", { clear = true }),
   callback = function()
     vim.api.nvim_set_hl(0, "LineNr", { fg = "#7f849c", bg = "NONE" })
-    vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#f5e0dc", bg = "NONE" })
+    vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#5FD85F", bg = "NONE" })
   end,
 })
