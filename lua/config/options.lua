@@ -33,7 +33,10 @@ end
 
 vim.g.lazyvim_eslint_auto_format = true
 vim.o.backupcopy = "yes"
+vim.opt.exrc = true
 
-vim.g.lazyvim_rust_diagnostics = "bacon-ls"
+-- vim.g.lazyvim_rust_diagnostics = "bacon-ls"
 vim.g.lazyvim_python_lsp = "pyright"
 vim.g.lazyvim_python_ruff = "ruff"
+
+vim.cmd("set mouse=")
